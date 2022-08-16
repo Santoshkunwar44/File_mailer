@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 3000
 require("dotenv").config()
 require("./config/db")()
 
+
 const corsConfig = {
     origin: process.env.ALLOWED_CLIENTS.split(",")
 }
