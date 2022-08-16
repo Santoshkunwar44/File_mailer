@@ -1,7 +1,10 @@
 const express = require("express")
 const path = require("path")
 const app = express()
+
 const cors = require("cors")
+
+const PORT = process.env.PORT || 3000
 
 
 require("dotenv").config()
@@ -21,5 +24,5 @@ app.set("view engine", 'ejs')
 // endpoints
 
 app.use("/api/files", require("./routes/files"))
-app.listen(8080, () => console.log(`server started`))
+app.listen(PORT, () => console.log(`server started`))
 
