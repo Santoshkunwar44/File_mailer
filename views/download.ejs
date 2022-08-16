@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FileMailer - Download page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Caveat:wght@600&family=Edu+NSW+ACT+Foundation:wght@600&family=Syne:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="tilteBox">
+      <img alt="download img" src="/img/download2.png" />
+      <h3 class="title">File Mailer</h3>
+    </div>
+    <section>
+      <img alt="download img" src="/img/download2.png" />
+      <% if(locals.error){ %>
+      <h4><%= locals.error %></h4>
+      <% }else{ %>
+      <h2 class="section_title">Your file is ready to download</h2>
+      <!-- <p class="expiresText">Link will be expired with in 24 hours</p> -->
+      <div class="download_meta">
+        <h4 class="fileName"><%=fileName%></h4>
+        <small class="fileSize"> <%= parseInt(fileSize /1000) %> KB</small>
+      </div>
+      <div class="send_btn_container">
+        <a href="<%= downloadLink%>">Download File</a>
+      </div>
+      <% } %>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Syne", sans-serif;
+}
+.body,
+html {
+  min-height: 100vh;
+  background-color: rgb(242, 245, 247);
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  justify-content: center;
+}
+.tilteBox {
+  top: 20px;
+  left: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  position: absolute;
+}
+.tilteBox img {
+  width: 60px;
+}
+.title {
+  color: rgb(141, 10, 141);
+  font-size: 2.7rem;
+  font-family: "Caveat Brush", cursive;
+}
+section {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Syne", sans-serif;
+  background-color: white;
+
+  gap: 20px;
+  box-shadow: 1px 11px 13px 3px #d0cbd9;
+  align-items: center;
+  padding: 30px;
+}
+
+.section_title {
+  font-size: 25px;
+  letter-spacing: 1.1px;
+  color: rgb(75, 71, 71);
+  font-weight: 400;
+}
+section a {
+  text-decoration: none;
+  color: white;
+  background-color: rgb(127, 34, 214);
+  padding: 10px;
+  height: 60px;
+  width: 150px;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+section a:hover {
+  background-color: rgba(137, 43, 226, 0.76);
+}
+section img {
+  width: 140px;
+  opacity: 0.5;
+}
+.download_meta {
+  text-align: center;
+  color: gray;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.fileName {
+  color: gray;
+  font-weight: 500;
+  font-size: 14px;
+}
+.fileSize {
+  color: blueviolet;
+  font-size: 16px;
+  font-weight: bold;
+}
+.expiresText {
+  color: gray;
+  color: red;
+}
