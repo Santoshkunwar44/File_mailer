@@ -1,13 +1,11 @@
+require("dotenv").config()
 const express = require("express")
+const cors = require("cors")
 const path = require("path")
 const app = express()
-
-const cors = require("cors")
-
 const PORT = process.env.PORT || 8080
 
 
-require("dotenv").config()
 require("./config/db")()
 
 
@@ -25,5 +23,6 @@ app.set("view engine", 'ejs')
 // endpoints
 
 app.use("/api/files", require("./routes/files"))
+
 app.listen(PORT, () => console.log(`server started`))
 

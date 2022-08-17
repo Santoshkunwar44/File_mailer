@@ -132,7 +132,6 @@ const downloadFile = async (req, res) => {
         }
 
         const filePath = `${__dirname}/../${file.path}`
-
         res.download(filePath)
     } catch (error) {
         res.render('download', { error: "Something went wrong" })
