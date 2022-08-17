@@ -9,12 +9,8 @@ const PORT = process.env.PORT || 8080
 require("./config/db")()
 
 
-const corsConfig = {
-    origin: process.env.ALLOWED_CLIENTS.split(",")
-}
-
 app.use(express.json())
-app.use(cors(corsConfig))
+app.use(cors())
 app.use(express.static('public'))
 app.set('views', path.join(__dirname, '/views'))
 app.set("view engine", 'ejs')
