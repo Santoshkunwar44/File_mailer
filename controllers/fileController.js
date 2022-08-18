@@ -143,13 +143,13 @@ const sendFiles = async (req, res) => {
     const { uuid, emailTo, emailFrom } = req.body
     console.log(uuid, emailFrom, emailTo)
     if (!uuid || !emailTo || !emailFrom) {
-        res.status(402).json({ message: "All fields are required", success: "false" })
+        return res.status(402).json({ message: "All fields are required", success: "false" })
     }
     try {
         // get file data from database 
         const file = await Files.findOne({ uuid })
         if (!file) {
-            res.status(404).json({ message: "something went wrong", success: false })
+            return res.status(404).json({ message: "something went wrong", success: false })
         }
 
         const sendMail = require("../services/email")
