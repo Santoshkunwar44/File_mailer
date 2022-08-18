@@ -141,6 +141,7 @@ const downloadFile = async (req, res) => {
 
 const sendFiles = async (req, res) => {
     const { uuid, emailTo, emailFrom } = req.body
+    console.log(uuid, emailFrom, emailTo)
     if (!uuid || !emailTo || !emailFrom) {
         res.status(402).json({ message: "All fields are required", success: "false" })
     }
